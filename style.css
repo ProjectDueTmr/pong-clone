@@ -5,7 +5,7 @@
 :root{
     --hue: 200;
     --saturation: 50%;
-    --foregroud-color: hsl(var(--hue), var(--saturation), 75%); 
+    --foreground-color: hsl(var(--hue), var(--saturation), 75%); 
     --background-color: hsl(var(--hue), var(--saturation), 20%);
 }
 body{
@@ -17,7 +17,7 @@ body{
 
     --position: 50;
     position: absolute;
-    background-color: var(--foregroud-color);
+    background-color: var(--foreground-color);
     top: calc(var(--position) * 1vh);
     transform: translateY(-50%);
     width: 1vh;
@@ -36,7 +36,7 @@ body{
     --y: 50;
 
     position: absolute;
-    background-color: var(--foregroud-color);
+    background-color: var(--foreground-color);
     top: calc(var(--y) * 1vh);
     left: calc(var(--x) * 1vw);
     border-radius: 50%;
@@ -50,10 +50,18 @@ body{
     justify-content: center;
     font-weight: bold;
     font-size: 7vh;
-    color: var(--foregroud-color);
+    color: var(--foreground-color);
 
 }
 .score > * {
     flex-grow: 1;
     flex-basis: 0;
+    padding: 0 2vh;
+    margin: 1vh 0;
+    opacity: .5;
+}
+
+.score > :first-child{
+    text-align: right;
+    border-right: .5vh solid var(--foreground-color);
 }
