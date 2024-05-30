@@ -10,8 +10,9 @@ function update(time){
     }
 
     lastTime = time
-    window.requestAnimationFrame(update)
     
+    window.requestAnimationFrame(update)
+    //this allows update() to be called every frame
     
 }
 
