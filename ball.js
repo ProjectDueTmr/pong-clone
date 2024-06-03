@@ -45,7 +45,6 @@ export default class Ball {
     }
 
     update(delta, paddleRects) {
-        this.x = -5
         this.x += this.direction.x * this.velocity * delta
         this.y += this.direction.y * this.velocity * delta
         this.velocity += VELOCITY_INCREASE * delta
